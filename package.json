@@ -1,0 +1,19 @@
+{
+  "name": "namastae_react",
+  "version": "1.0.0",
+  "description": "this is a live course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Shivetafotedar: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@github.com/Shivetafotedar/Namastae_React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivetafotedar/Namastae_React/issues"
+  },
+  "homepage": "https://github.com/Shivetafotedar/Namastae_React#readme"
+}
