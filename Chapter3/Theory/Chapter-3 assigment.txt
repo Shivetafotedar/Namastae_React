@@ -1,0 +1,47 @@
+Q1) What is JSX?
+● JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
+--------------------------------------------------------
+Q2)React.createElement VS JSX?
+● React.createElement() Method: The React.createElement() method is used to create elements. Whenever we write code in JSX , JSX converts it to React.createElement(). The createElement method is not recommended to use as it is very hard to maintain or debug. We’ve to call the React.createElement() method every time for the creation of a React element, even if it is just a span tag with no attributes.
+
+Syntax: 
+React.createElement(
+    type,
+    [props],
+    [...children]
+)
+--------------------------------------------------------
+Q3)Benefits of Jsx?
+● JSX helps us in keeping our code simpler and elegant when writing large pieces of code.
+● According to the React docs, most people find it helpful as a visual aid when working with UI inside the JavaScript code.
+● JSX also allows React to show more useful error and warning messages.
+● If one is familiar with HTML, it is quite easy to use JSX when building React application
+● Faster than normal JavaScript as it performs optimizations while translating to regular JavaScript.
+--------------------------------------------------------
+Q4)Babel and parcel role in JSX?
+--------------------------------------------------------
+Q5)What is components?
+● A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI. 
+You can see in the below image we have broken down the UI of GeeksforGeeks’s homepage into individual components. 
+--------------------------------------------------------
+Q6)What is Functional components?
+Functional components are some of the more common components that will come across while working in React.These are simply JavaScript functions.
+We can create a functional component to React by writing a JavaScript function. These functions may or may not receive data as parameters.
+In the functional Components, the return value is the JSX code to render to the DOM tree.
+--------------------------------------------------------
+Q7)What is component composition in React?
+● We can make components more generic by accepting props, which are to React components what parameters are to functions.
+● Component composition is the name for passing components as props to other components, thus creating new components with other components.
+Example:
+const Button = ({ onClick, children }) => (
+ <button onClick={onClick}>{children}</button>
+);
+
+const App = () => {
+  const onClick = () => alert('Hey');
+
+  return (
+    <Button onClick={onClick}>Click me!</Button>
+  );
+};
+--------------------------------------------------------------------------------
