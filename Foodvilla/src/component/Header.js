@@ -1,20 +1,24 @@
-import React from "react";
-const Foodlogo=()=>{
-  return(
+import React, { useState } from "react";
+const Foodlogo = () => {
+  return (
     <img
-    src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj"
-    height={"50px"}
-    alt="logo"
-  />
-  )
-}
+      src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj"
+      height={"50px"}
+      alt="logo"
+    />
+  );
+};
+const loggedInUser = () => {
+  // API call to check authentication
+  return false;
+};
 const Header = () => {
- 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <Foodlogo/>
+          <Foodlogo />
         </a>
         <button
           className="navbar-toggler"
@@ -51,23 +55,24 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <form className="d-flex justify-content-between">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success mr-2" type="submit">
-              Search
-            </button>
-            <button className="btn btn-outline-success mr-2" type="submit">
-              Login
-            </button>
-            <button className="btn btn-outline-success mr-2" type="submit">
-              Logout
-            </button>
-          </form>
+
+          <div className="d-flex justify-content-between">
+            {isLoggedIn ? (
+              <button
+                className="btn btn-outline-success mr-2"
+                onClick={() => setIsLoggedIn(false)}
+              >
+                Logout
+              </button>
+            ) : (
+              <button
+                className="btn btn-outline-success mr-2"
+                onClick={() => setIsLoggedIn(true)}
+              >
+                Login
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </nav>
@@ -75,4 +80,4 @@ const Header = () => {
 };
 
 export default Header;
-export {Foodlogo}
+export { Foodlogo };
