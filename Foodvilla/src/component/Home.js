@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { restaurantList } from "./Constant";
 import axios from "axios";
-const Body = () => {
+import Shimmer from "./Shimmer";
+const Home = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -41,7 +42,9 @@ const Body = () => {
     console.log(res);
   };
 
-  return (
+  return allRestaurants?.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="p-3">
       <div className="d-flex ">
         <input
@@ -74,4 +77,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Home;

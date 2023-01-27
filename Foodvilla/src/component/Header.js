@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import routeconstant from "../Routing/Routeconstant";
 const Foodlogo = () => {
   return (
     <img
@@ -34,25 +36,29 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to={routeconstant.HOME}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to={routeconstant.ABOUT}>
                 About
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link " href="#">
+              <Link className="nav-link " to={routeconstant.CONTACT}>
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link " href="#">
+              <Link className="nav-link " to={routeconstant.CART}>
                 Cart
-              </a>
+              </Link>
             </li>
           </ul>
 

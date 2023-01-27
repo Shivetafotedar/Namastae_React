@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import routeconstant from "../Routing/Routeconstant";
 import { IMG_CDN_URL } from "./Constant";
 const RestaurantCard = (props) => {
+  const navigation = useNavigate();
   return (
-    <div className="card me-3" style={{ width: "18rem" }}>
+    <div
+      className="card me-3"
+      style={{ width: "18rem" }}
+      onClick={() => {
+        navigation(routeconstant.ABOUT);
+      }}
+    >
       <img
         src={IMG_CDN_URL + props.item.data.cloudinaryImageId}
         className="card-img-top"
